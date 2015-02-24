@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        mavenLocal()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url "https://oss.sonatype.org/content/groups/public" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.2'
+    }
+}
+
+/**
+ * Returns the build version code.
+ * This is either 9999 for a locally built apk, or the build server build number.
+ * versionCode is fed in through command line arguments (-PversionCode) with the build server build count.
+ * @return integer Version Code.
+ */
+def Integer buildVersionCode() {
+    if (project.hasProperty('versionCode')) {
+        return project.properties.versionCode.toInteger()
+    } else {
+        return 1;
+    }
+}
+
+/**
+ * Returns the build version name.
+ * version needs to be in your gradle.properties. All else fails, it simply resorts to 1.0 as a version name
+ * Gradle-Release-Plugin handles all version name incrementing
+ * @return String Version Name.
+ */
+def String buildVersionName() {
+    return "1.0.0";
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            credentials {
+                username localMavenUser
+                password localMavenPassword
+            }
+            url localMavenUrl
+        }
+    }
+}
+apply plugin: 'signing'

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="android.ble.wcm.microchip.com.microchip" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application
+        android:name="android.ble.wcm.microchip.com.microchip.MainApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="android.ble.wcm.microchip.com.microchip.activities.MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:exported="true"
+            android:name="com.willowtreeapps.trailmarker.TrailMarkerLiveActivity" />
+
+        <service
+            android:name="android.ble.wcm.microchip.com.microchip.api.ApiService"
+            android:enabled="true" />
+        <service
+            android:name=".ble.BleService"
+            android:enabled="true" />
+
+        <provider
+            android:authorities="android.ble.wcm.microchip.com.provider"
+            android:name="android.ble.wcm.microchip.com.microchip.provider.MicrochipProvider"
+            android:exported="true" />
+
+    </application>
+
+</manifest>

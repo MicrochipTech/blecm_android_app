@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/spacing_normal"
+    tools:background="@color/blackDark"
+    android:background="@drawable/microchip_default_selector_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/spacing_normal"
+        android:paddingLeft="@dimen/spacing_normal"
+        android:paddingBottom="@dimen/spacing_small"
+        android:orientation="horizontal"
+        >
+
+        <android.ble.wcm.microchip.com.microchip.widget.MicrochipCircleStatus
+            android:id="@+id/status"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <oak.widget.TextViewWithFont
+            android:id="@+id/title"
+            style="@style/MicrochipConsoleText"
+            />
+
+    </LinearLayout>
+
+    <oak.widget.TextViewWithFont
+        android:id="@+id/text"
+        style="@style/MicrochipConsoleText"
+        android:paddingRight="@dimen/spacing_normal"
+        android:paddingLeft="@dimen/spacing_normal"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/greyDark"
+        android:layout_marginTop="@dimen/spacing_normal"/>
+
+</LinearLayout>

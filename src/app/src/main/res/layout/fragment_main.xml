@@ -1,0 +1,276 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/WrapDefaultPaddingLeftRight"
+            android:background="@drawable/background_white_bottom_divider"
+            >
+
+            <!-- Button Label Columns -->
+            <LinearLayout
+                android:id="@+id/buttons_label_container"
+                style="@style/Wrap"
+                android:orientation="vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="@dimen/spacing_normal"
+                >
+
+                <oak.widget.TextViewWithFont
+                    style="@style/MicrochipLabel1Weighted"
+                    android:text="@string/label_buttons"/>
+
+                <oak.widget.TextViewWithFont
+                    style="@style/MicrochipLabel2Weighted"
+                    android:text="@string/label_s1"/>
+
+                <oak.widget.TextViewWithFont
+                    style="@style/MicrochipLabel2Weighted"
+                    android:text="@string/label_s2"/>
+
+                <oak.widget.TextViewWithFont
+                    style="@style/MicrochipLabel2Weighted"
+                    android:text="@string/label_s3"/>
+
+                <oak.widget.TextViewWithFont
+                    style="@style/MicrochipLabel2Weighted"
+                    android:text="@string/label_s4"/>
+
+            </LinearLayout>
+
+            <!-- Button Columns -->
+            <LinearLayout
+                android:id="@+id/buttons_container"
+                style="@style/Wrap"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/buttons_label_container"
+                android:layout_toEndOf="@+id/buttons_label_container"
+                android:gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@+id/buttons_label_container"
+                >
+
+                <oak.widget.TextViewWithFont
+                    android:id="@+id/buttons_column_label"
+                    style="@style/MicrochipLabel1Weighted"
+                    android:text="@string/label_buttons_s"
+                    android:alpha="0"
+                    tools:alpha="1"/>
+
+                <android.ble.wcm.microchip.com.microchip.widget.MicrochipCircleButton
+                    android:id="@+id/button_1"
+                    style="@style/MicrochipCircleWeighted"
+                    />
+
+                <android.ble.wcm.microchip.com.microchip.widget.MicrochipCircleButton
+                    android:id="@+id/button_2"
+                    style="@style/MicrochipCircleWeighted"
+                    />
+
+                <android.ble.wcm.microchip.com.microchip.widget.MicrochipCircleButton
+                    android:id="@+id/button_3"
+                    style="@style/MicrochipCircleWeighted"
+                    />
+
+                <android.ble.wcm.microchip.com.microchip.widget.MicrochipCircleButton
+                    android:id="@+id/button_4"
+                    style="@style/MicrochipCircleWeighted"
+                    />
+
+            </LinearLayout>
+
+            <!-- Switch Label Columns -->
+            <LinearLayout
+                android:id="@+id/switch_label_container"
+                style="@style/WrapDefaultPaddingLeftRight"
+                android:orientation="vertical"
+                android:layout_toLeftOf="@+id/switch_container"
+                android:layout_toStartOf="@+id/switch_container"
+                android:gravity="center_horizontal"
+                android:layout_alignBottom="@+id/buttons_label_container"
+                android:layout_marginRight="@dimen/spacing_normal"
+                >
+
+                <oak.widget.TextViewWithFont
+                    style="@style/MicrochipLabel1Weighted"
+                    android:text="@string/label_leds"/>
+
+                <oak.widget.TextViewWithFont
+                    style="@style/MicrochipLabel2Weighted"
+                    android:text="@string/label_d1"/>
+
+                <oak.widget.TextViewWithFont
+                    style="@style/MicrochipLabel2Weighted"
+                    android:text="@string/label_d2"/>
+
+                <oak.widget.TextViewWithFont
+                    style="@style/MicrochipLabel2Weighted"
+                    android:text="@string/label_d3"/>
+
+                <oak.widget.TextViewWithFont
+                    style="@style/MicrochipLabel2Weighted"
+                    android:text="@string/label_d4"/>
+
+            </LinearLayout>
+
+            <!-- Switch Columns -->
+            <LinearLayout
+                android:id="@+id/switch_container"
+                style="@style/Wrap"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@+id/buttons_label_container"
+                >
+
+                <TextView
+                    android:id="@+id/switches_column_label"
+                    style="@style/MicrochipLabel1Weighted"
+                    android:text="@string/label_d"
+                    android:alpha="0"
+                    tools:alpha="1"
+                    />
+
+                <android.ble.wcm.microchip.com.microchip.widget.MicrochipSwitch
+                    android:id="@+id/switch_d1"
+                    style="@style/MicrochipSwitchWeighted"
+                    />
+
+                <android.ble.wcm.microchip.com.microchip.widget.MicrochipSwitch
+                    android:id="@+id/switch_d2"
+                    style="@style/MicrochipSwitchWeighted"
+                    />
+
+                <android.ble.wcm.microchip.com.microchip.widget.MicrochipSwitch
+                    android:id="@+id/switch_d3"
+                    style="@style/MicrochipSwitchWeighted"
+                    />
+
+                <android.ble.wcm.microchip.com.microchip.widget.MicrochipSwitch
+                    android:id="@+id/switch_d4"
+                    style="@style/MicrochipSwitchWeighted"
+                    />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:background="@drawable/background_white_bottom_top_divider"
+            android:orientation="vertical"
+            >
+
+            <oak.widget.TextViewWithFont
+                android:id="@+id/potentiometer_label"
+                style="@style/MicrochipLabel1"
+                android:text="@string/potentiometer"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_small"
+                >
+
+                <oak.widget.TextViewWithFont
+                    android:id="@+id/potentiometer_text"
+                    style="@style/MicrochipLabel2"
+                    android:layout_width="80dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center_horizontal"
+                    android:textSize="24sp"
+                    android:text="@string/zero"
+                    android:layout_centerVertical="true" />
+
+                <ProgressBar
+                    android:id="@+id/potentiometer_progressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/microchip_horizontal_progress_bar"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/potentiometer_text"
+                    android:layout_toStartOf="@+id/potentiometer_text"
+                    android:progress="0"
+                    tools:progress="89"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/status_server_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/spacing_normal"
+            android:paddingRight="@dimen/spacing_normal"
+            android:paddingBottom="@dimen/spacing_tiny"
+            android:paddingLeft="@dimen/spacing_normal"
+            >
+
+            <android.ble.wcm.microchip.com.microchip.widget.MicrochipCircleStatus
+                android:id="@+id/status_server"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                />
+
+            <oak.widget.TextViewWithFont
+                android:id="@+id/status_server_text"
+                style="@style/MicrochipLabel2"
+                android:text="@string/server_not_configured"
+                android:layout_marginStart="@dimen/spacing_small"
+                android:layout_marginLeft="@dimen/spacing_small"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/status_ble_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/spacing_tiny"
+            android:paddingRight="@dimen/spacing_normal"
+            android:paddingBottom="@dimen/spacing_normal"
+            android:paddingLeft="@dimen/spacing_normal"
+            >
+
+            <android.ble.wcm.microchip.com.microchip.widget.MicrochipCircleStatus
+                android:id="@+id/status_ble"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                />
+
+            <oak.widget.TextViewWithFont
+                android:id="@+id/status_ble_text"
+                style="@style/MicrochipLabel2"
+                android:text="@string/ble_not_configured"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:layout_marginStart="@dimen/spacing_small"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        style="@style/MicrochipDivider"
+        />
+
+    <ImageView
+        android:id="@+id/settings_wta_attribution"
+        style="@style/Wrap"
+        android:contentDescription="@string/settings_wta_attribution"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/spacing_normal"
+        android:src="@drawable/img_wta_attribution"
+        android:scaleType="fitEnd"
+        android:layout_marginTop="@dimen/spacing_largest"
+        />
+
+    <LinearLayout
+        android:id="@+id/settings_version_attribution"
+        style="@style/MatchWidthWrapHeight"
+        android:layout_marginBottom="@dimen/spacing_normal"
+        android:gravity="center_horizontal|center_vertical">
+
+        <com.willowtreeapps.saguaro.android.widget.VersionTextView
+        android:id="@+id/version"
+        style="@style/MicrochipVersionTextView"
+        />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/black"
+            />
+
+        <com.willowtreeapps.saguaro.android.widget.AcknowledgmentsTextView
+            android:id="@+id/acknowledgments"
+            style="@style/MicrochipVersionTextView"
+            />
+
+    </LinearLayout>
+</LinearLayout>

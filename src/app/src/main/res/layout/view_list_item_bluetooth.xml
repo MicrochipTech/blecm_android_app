@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_normal"
+    >
+
+    <oak.widget.TextViewWithFont
+        style="@style/MicrochipLabel3"
+        android:id="@+id/list_item_bluetooth_text"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/list_item_bluetooth_radio"
+        tools:text="Lorem Ipsum"
+        />
+
+    <RadioButton
+        android:id="@+id/list_item_bluetooth_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:checked="false"
+        android:focusable="false"
+        android:clickable="false"
+        />
+
+</RelativeLayout>

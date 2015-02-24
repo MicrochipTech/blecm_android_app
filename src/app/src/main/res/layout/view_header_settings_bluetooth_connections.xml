@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_normal"
+    android:layout_marginStart="@dimen/spacing_normal"
+    android:layout_marginEnd="@dimen/spacing_normal"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <oak.widget.TextViewWithFont
+            style="@style/MicrochipLabel1"
+            android:id="@+id/settings_bluetooth_connections"
+            android:text="@string/settings_bluetooth_connections"
+            android:layout_centerVertical="true"
+            />
+
+        <ProgressBar
+            android:id="@+id/settings_bluetooth_progress_bar"
+            android:layout_width="@dimen/spacing_normal"
+            android:layout_height="@dimen/spacing_normal"
+            android:layout_toStartOf="@+id/settings_bluetooth_progress_text"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+        <oak.widget.TextViewWithFont
+            style="@style/MicrochipLabel4"
+            android:id="@+id/settings_bluetooth_progress_text"
+            android:text="@string/settings_connecting"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+    </RelativeLayout>
+
+    <oak.widget.TextViewWithFont
+        style="@style/MicrochipLabel5"
+        android:id="@+id/settings_bluetooth_empty_view"
+        android:text="@string/settings_bluetooth_empty_list"
+        android:padding="@dimen/spacing_large"
+        />
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apache2_projects">
+        <item>OkHttp</item>
+        <item>Gson</item>
+        <item>OAK</item>
+        <item>Retrofit</item>
+        <item>FloatLabeledEditText</item>
+    </string-array>
+</resources>
